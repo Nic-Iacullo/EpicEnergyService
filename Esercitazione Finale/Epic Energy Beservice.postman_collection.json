@@ -1,0 +1,718 @@
+{
+	"info": {
+		"_postman_id": "9fa1ab65-18b2-4599-b048-2fd2dfc69cc4",
+		"name": "Epic Energy Beservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "INDIRIZZO",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\":\"3\",\r\n    \"via\" : \"Via dei pini\",\r\n    \"civico\":\"42\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/indirizzocontroller/saveindirizzo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"indirizzocontroller",
+								"saveindirizzo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/indirizzocontroller/deleteindirizzo?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"indirizzocontroller",
+								"deleteindirizzo"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"via\": \"Via dei pini\",\r\n    \"civico\": \"52\",\r\n    \"cap\": \"56025\",\r\n    \"localita\": \"Pietroconti\",\r\n    \"comune\": {\r\n        \"id\": \"52\",\r\n        \"nome\": \"Cantalupa\",\r\n        \"provincia\": {\r\n            \"id\": \"97\",\r\n            \"nome\": \"Torino\",\r\n            \"sigla\": \"TO\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/indirizzocontroller/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"indirizzocontroller",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENTE",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ragioneSociale\":\"Porcino allegro.\",\r\n    \"partitaIva\":\"45871256358\",\r\n    \"tipoCliente\":\"SRL\",\r\n    \"email\":\"porcino@mail.com\",\r\n    \"pec\":\"porcino.pec@mail.com\",\r\n    \"telefono\":\"048554359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantani\",\r\n    \"telefonoContatto\":\"0558645\",\r\n    \"emailContatto\":\"m.pantani@mail.com\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"3\",\r\n    \"via\" : \"Via dei pini\",\r\n    \"civico\":\"42\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"4\",\r\n    \"via\" : \"Via dei mille\",\r\n    \"civico\":\"12\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":\"2500000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clientecontroller/savecliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"savecliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ragioneSociale\":\"E&Y Incoming.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"e&y@mail.com\",\r\n    \"pec\":\"e&ypec@mail.com\",\r\n    \"telefono\":\"048554359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantani\",\r\n    \"telefonoContatto\":\"0558645\",\r\n    \"emailContatto\":\"m.pantani@mail.com\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"3\",\r\n    \"via\" : \"Via dei pini\",\r\n    \"civico\":\"42\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"4\",\r\n    \"via\" : \"Via dei mille\",\r\n    \"civico\":\"12\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":2500000.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clientecontroller/modificacliente/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"modificacliente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/deletecliente/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"deletecliente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER RAGIONE SOCIALE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/orderbyragionesociale",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"orderbyragionesociale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER FATTURATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/orderbyfatturato",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"orderbyfatturato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER DATA INSERIMENTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/orderbydatainserimento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"orderbydatainserimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER BY CONTATTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/orderbydatacontatto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"orderbydatacontatto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER SEDE LEGALE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/orderbysedelegale",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"orderbysedelegale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY FATTURATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/findbyfatturato?fatturatoAnnuale=2500000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"findbyfatturato"
+							],
+							"query": [
+								{
+									"key": "fatturatoAnnuale",
+									"value": "2500000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY NAME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientecontroller/findbyname?parte=Por",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientecontroller",
+								"findbyname"
+							],
+							"query": [
+								{
+									"key": "parte",
+									"value": "Por"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "COMUNE",
+			"item": []
+		},
+		{
+			"name": "FATTURA",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":\"2021-11-10\",\r\n    \"numero\":\"125\",\r\n    \"anno\":\"2021\",\r\n    \"importo\":2000,\r\n    \"stato\":{\r\n        \"id\":\"2\",\r\n        \"nome\":\"PAGATO\"},\r\n    \"cliente\":{\r\n        \"id\":\"4\",\r\n    \"ragioneSociale\":\"E&Y Incoming.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"e&y@mail.com\",\r\n    \"pec\":\"e&ypec@mail.com\",\r\n    \"telefono\":\"048554359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantani\",\r\n    \"telefonoContatto\":\"0558645\",\r\n    \"emailContatto\":\"m.pantani@mail.com\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"3\",\r\n    \"via\" : \"Via dei pini\",\r\n    \"civico\":\"42\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"4\",\r\n    \"via\" : \"Via dei mille\",\r\n    \"civico\":\"12\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":2500000.0\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/delete?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":\"2021-11-10\",\r\n    \"numero\":\"125\",\r\n    \"anno\":\"2021\",\r\n    \"importo\":2000,\r\n    \"stato\":{\r\n        \"id\":\"1\",\r\n        \"nome\":\"PAGATO\"},\r\n    \"cliente\":{\r\n        \"id\":\"4\",\r\n    \"ragioneSociale\":\"E&Y Incoming.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"e&y@mail.com\",\r\n    \"pec\":\"e&ypec@mail.com\",\r\n    \"telefono\":\"048554359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantani\",\r\n    \"telefonoContatto\":\"0558645\",\r\n    \"emailContatto\":\"m.pantani@mail.com\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"3\",\r\n    \"via\" : \"Via dei pini\",\r\n    \"civico\":\"42\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"4\",\r\n    \"via\" : \"Via dei mille\",\r\n    \"civico\":\"12\",\r\n    \"cap\":\"56025\",\r\n    \"localita\":\"Pietroconti\",\r\n    \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":2500000.0\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/update/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/findbyclient?id=4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"findbyclient"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY STATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/findbystato?stato=PAGATO",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"findbystato"
+							],
+							"query": [
+								{
+									"key": "stato",
+									"value": "PAGATO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/findbydata?date=2021-11-10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"findbydata"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2021-11-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY ANNO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/findbyanno?anno=2021",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"findbyanno"
+							],
+							"query": [
+								{
+									"key": "anno",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY IMPORTO BETWEEN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fatturacontroller/findbyimporto?value1=1000&value2=3000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fatturacontroller",
+								"findbyimporto"
+							],
+							"query": [
+								{
+									"key": "value1",
+									"value": "1000"
+								},
+								{
+									"key": "value2",
+									"value": "3000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PROVINCIA",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Provincia\",\r\n    \"sigla\":\"PROV\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/provinciacontroller/saveprovincia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinciacontroller",
+								"saveprovincia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Provinc\",\r\n    \"sigla\":\"Prov\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/provinciacontroller/updateprovincia/111",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinciacontroller",
+								"updateprovincia",
+								"111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/provinciacontroller/deleteprovincia?id=111",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinciacontroller",
+								"deleteprovincia"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "111"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SECURITY",
+			"item": [
+				{
+					"name": "SINGUP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user\",\r\n    \"nome\":\"user\",\r\n    \"cognome\":\"user1\",\r\n    \"email\":\"user@user.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SINGUP ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"nome\":\"admin\",\r\n    \"cognome\":\"admin1\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
